@@ -69,7 +69,7 @@ func (c *Cookies) GetSandboxCookie(k, v string, age int) string {
 	sb.WriteString(k + "=" + v + ";")
 	sb.WriteString(" Path=/;")
 	sb.WriteString(fmt.Sprintf(" Max-Age=%d;", age))
-	sb.WriteString(" Secure; HttpOnly;")
+	sb.WriteString("HttpOnly;")
 	return sb.String()
 }
 
